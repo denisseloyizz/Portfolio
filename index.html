@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEasy – Online Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="logo">ShopEasy</a>
+      <nav class="nav">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__content">
+      <h1>Welcome to ShopEasy</h1>
+      <p>Discover our curated collection of quality products at great prices.</p>
+      <a href="#products" class="btn btn--primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <main class="main" id="products">
+    <h2 class="section-title">Our Products</h2>
+
+    <!-- Filter bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="electronics">Electronics</button>
+      <button class="filter-btn" data-category="clothing">Clothing</button>
+      <button class="filter-btn" data-category="home">Home</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+  </main>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2 class="section-title">About Us</h2>
+    <p>ShopEasy is your go-to destination for everyday essentials and unique finds.
+       We focus on quality, affordability, and a seamless shopping experience.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 ShopEasy. All rights reserved.</p>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <aside class="cart-sidebar" id="cartSidebar" aria-hidden="true">
+    <div class="cart-sidebar__header">
+      <h2>Your Cart</h2>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="cart-sidebar__footer">
+      <p class="cart-total">Total: <strong id="cartTotal">$0.00</strong></p>
+      <button class="btn btn--primary btn--full" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
