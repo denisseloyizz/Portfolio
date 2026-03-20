@@ -1,0 +1,103 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Projects | Denis Seloy" description="A showcase of projects built by Denis Seloy." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Projects</h1>
+			<p class="intro">Here are some of the projects I've worked on. More on my <a href="https://github.com/denisseloyizz" target="_blank" rel="noopener">GitHub</a>.</p>
+
+			<div class="projects-grid">
+				<article class="project-card">
+					<div class="card-header">
+						<h2>Portfolio Website</h2>
+						<span class="badge">Astro</span>
+					</div>
+					<p>
+						A personal portfolio and blog built with Astro. Fast, SEO-friendly, and deployed as a
+						static site. Features MDX blog posts, an RSS feed, and a sitemap.
+					</p>
+					<div class="card-links">
+						<a href="https://github.com/denisseloyizz/Portfolio" target="_blank" rel="noopener">Source →</a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<div class="card-header">
+						<h2>Open Source Contributions</h2>
+						<span class="badge">Various</span>
+					</div>
+					<p>
+						Active contributions to open-source repositories — bug fixes, documentation improvements,
+						and new features across multiple projects.
+					</p>
+					<div class="card-links">
+						<a href="https://github.com/denisseloyizz" target="_blank" rel="noopener">GitHub Profile →</a>
+					</div>
+				</article>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	h1 {
+		margin-bottom: 0.3em;
+	}
+	.intro {
+		color: rgb(var(--gray));
+		margin-bottom: 2em;
+	}
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 1.5em;
+	}
+	.project-card {
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 10px;
+		padding: 1.4em 1.6em;
+		box-shadow: var(--box-shadow);
+		display: flex;
+		flex-direction: column;
+	}
+	.card-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 0.6em;
+	}
+	.card-header h2 {
+		font-size: 1.15em;
+		margin: 0;
+	}
+	.badge {
+		font-size: 0.7em;
+		background: var(--accent);
+		color: #fff;
+		border-radius: 4px;
+		padding: 0.2em 0.6em;
+		white-space: nowrap;
+	}
+	.project-card p {
+		font-size: 0.9em;
+		color: rgb(var(--gray-dark));
+		flex: 1;
+	}
+	.card-links {
+		margin-top: 0.8em;
+	}
+	.card-links a {
+		font-size: 0.9em;
+		font-weight: 700;
+	}
+</style>
